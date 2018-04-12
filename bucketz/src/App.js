@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import logo from "./blueBucket.png";
 import "./App.css";
-import Income from "./Components/Income";
+import Income from "./Containers/Income";
 import FixedCosts from "./Components/FixedCosts";
 import VariableBuckets from "./Components/VariableBuckets";
 import Expenses from "./Components/Expenses";
