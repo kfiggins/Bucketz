@@ -9,8 +9,17 @@ import { Provider } from "react-redux";
 // import rootReducer from "./Reducers";
 import income from "./Reducers/income";
 
+const payPeriods = [
+  {
+    id: 500,
+    gross: 500,
+    net: 30,
+    payDate: "2/7/2018"
+  }
+];
+
 const Wrapper = () => {
-  const initialState = {};
+  const initialState = { payPeriods };
 
   const store = createStore(
     income,
