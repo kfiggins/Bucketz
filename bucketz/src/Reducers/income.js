@@ -9,7 +9,10 @@ const incomes = (state = [], action) => {
             id: action.id,
             gross: action.income.gross,
             net: action.income.net,
-            payDate: action.income.payDate // TODO: Once I've made a date picker component then add in date!
+            payDate: action.income.payDate, // TODO: Once I've made a date picker component then add in date!
+            fixedCosts: [],
+            variableBuckets: [],
+            expenses: []
           }
         ]
       };

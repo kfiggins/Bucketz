@@ -14,7 +14,20 @@ const payPeriods = [
     id: 500,
     gross: 500,
     net: 30,
-    payDate: "2/7/2018"
+    payDate: "2/7/2018",
+    fixedCosts: [{ fixedCostId: 1, name: "Rent", amount: 450 }],
+    variableBuckets: [
+      {
+        bucketId: 1,
+        name: "Food and Hygene",
+        currentAmount: 667,
+        amountFromIncome: 500,
+        amountLeftOver: 167
+      }
+    ],
+    expenses: [
+      { expenseId: 1, note: "Mcdonalds", amount: 13.37, date: "2/7/2018" }
+    ]
   }
 ];
 
