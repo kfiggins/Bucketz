@@ -15,7 +15,7 @@ const payPeriods = [
     gross: 500,
     net: 30,
     payDate: "2/7/2018",
-    fixedCosts: [{ fixedCostId: 1, name: "Rent", amount: 450 }],
+    fixedCosts: [{ fixedCostId: 1, type: "Rent", amount: 450 }],
     variableBuckets: [
       {
         bucketId: 1,
@@ -32,7 +32,7 @@ const payPeriods = [
 ];
 
 const Wrapper = () => {
-  const initialState = { payPeriods };
+  const initialState = { payPeriods, selectedPayPeriod: 500 };
 
   const store = createStore(
     income,

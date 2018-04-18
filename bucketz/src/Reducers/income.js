@@ -14,23 +14,22 @@ const incomes = (state = [], action) => {
             variableBuckets: [],
             expenses: []
           }
-        ]
+        ],
+        selectedPayPeriod: action.id
       };
-    // return [
-    //   ...state,
-    //   payPeriods[
-    //     {
-    //       id: action.id,
-    //       gross: action.income.gross,
-    //       net: action.income.net
-    //     }
-    //   ]
-    // ];
-    case "TOGGLE_TODO":
-      return state.map(
-        todo =>
-          todo.id === action.id ? { ...todo, completed: !todo.completed } : todo
-      );
+    case "ADD_FIXED_COST":
+      return {
+        ...state,
+        payPeriods: state.payPeriods.map(
+          payPeriod =>
+            payPeriod.id === state.selectedPayPeriod
+              ? {
+                  ...payPeriod,
+                  fixedCosts: [...payPeriod.fixedCosts, action.fixedCost]
+                }
+              : payPeriod
+        )
+      };
     default:
       return state;
   }

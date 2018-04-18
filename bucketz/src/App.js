@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./blueBucket.png";
 import "./App.css";
 import Income from "./Containers/Income";
-import FixedCosts from "./Components/FixedCosts";
+import FixedCosts from "./Containers/FixedCosts";
 import VariableBuckets from "./Components/VariableBuckets";
 import Expenses from "./Components/Expenses";
 // import { Tabs, Tab } from "material-ui/Tabs";

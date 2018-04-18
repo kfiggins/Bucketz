@@ -11,16 +11,17 @@ const BudgetHistory = ({ payPeriods }) => {
   return (
     <div>
       <ul>
-        <h3>Pay Periods</h3>
+        <h2>Pay Periods</h2>
         {payPeriods.map(payPeriod => (
           <div>
+            <h3>Pay Period</h3>
             <li key={payPeriod.id}>
               PayDate: {payPeriod.payDate} Gross: {payPeriod.gross} Net:{" "}
               {payPeriod.net}.
               <h4>Fixed Costs</h4>
               {payPeriod.fixedCosts.map(fc => (
                 <div>
-                  Name: {fc.name} Amount {fc.amount}
+                  Name: {fc.type} Amount {fc.amount}
                 </div>
               ))}
               <h4>Buckets</h4>

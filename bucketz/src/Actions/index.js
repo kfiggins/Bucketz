@@ -1,7 +1,12 @@
-let nextTodoId = 0;
+let payPeriodId = 1;
 
 export const addIncome = income => ({
   type: "ADD_INCOME",
-  id: nextTodoId++,
+  id: payPeriodId++,
   income
+});
+
+export const addFixedCost = fixedCost => ({
+  type: "ADD_FIXED_COST",
+  fixedCost
 });
