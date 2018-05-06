@@ -9,6 +9,7 @@ import { Provider } from "react-redux";
 // import rootReducer from "./Reducers";
 import income from "./Reducers/income";
 
+// Initial State
 const payPeriods = [
   {
     id: 500,

@@ -30,6 +30,22 @@ const incomes = (state = [], action) => {
               : payPeriod
         )
       };
+    case "ADD_VARIABLE_BUCKET":
+      return {
+        ...state,
+        payPeriods: state.payPeriods.map(
+          payPeriod =>
+            payPeriod.id === state.selectedPayPeriod
+              ? {
+                  ...payPeriod,
+                  variableBuckets: [
+                    ...payPeriod.variableBuckets,
+                    action.variableBucket
+                  ]
+                }
+              : payPeriod
+        )
+      };
     default:
       return state;
   }
