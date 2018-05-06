@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 import logo from "./blueBucket.png";
 import "./App.css";
-// import Income from "./Containers/Income";
-// import FixedCosts from "./Containers/FixedCosts";
-// import VariableBuckets from "./Components/VariableBuckets";
-// import Expenses from "./Components/Expenses";
+import Income from "./Containers/Income";
+import FixedCosts from "./Containers/FixedCosts";
+import VariableBuckets from "./Components/VariableBuckets";
+import Expenses from "./Components/Expenses";
 // import { Tabs, Tab } from "material-ui/Tabs";
 import BudgetHistory from "./Containers/BudgetHistory";
-import BucketzForm from "./Containers/BucketzForm";
 
 class App extends Component {
   render() {
-    // const styles = {};
-
     return (
       <div className="App">
         <header className="App-header">
@@ -22,8 +19,8 @@ class App extends Component {
         <div>
           <BudgetHistory />
         </div>
-        <BucketzForm />
-        {/* <div>
+
+        <div>
           <Income />
         </div>
 
@@ -35,7 +32,7 @@ class App extends Component {
 
         <div>
           <Expenses />
-        </div> */}
+        </div>
       </div>
     );
   }
